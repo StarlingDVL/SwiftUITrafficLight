@@ -11,6 +11,7 @@
 		2B2F1F19280F0D1900F40B0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F1F18280F0D1900F40B0B /* ContentView.swift */; };
 		2B2F1F1B280F0D1C00F40B0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F1F1A280F0D1C00F40B0B /* Assets.xcassets */; };
 		2B2F1F1E280F0D1C00F40B0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2F1F1D280F0D1C00F40B0B /* Preview Assets.xcassets */; };
+		2B2F1F25280F0D5E00F40B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F1F24280F0D5E00F40B0B /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2B2F1F18280F0D1900F40B0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B2F1F1A280F0D1C00F40B0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2F1F1D280F0D1C00F40B0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B2F1F24280F0D5E00F40B0B /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				2B2F1F18280F0D1900F40B0B /* ContentView.swift */,
 				2B2F1F1A280F0D1C00F40B0B /* Assets.xcassets */,
 				2B2F1F1C280F0D1C00F40B0B /* Preview Content */,
+				2B2F1F24280F0D5E00F40B0B /* CircleView.swift */,
 			);
 			path = SwiftUITrafficLight;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2F1F25280F0D5E00F40B0B /* CircleView.swift in Sources */,
 				2B2F1F19280F0D1900F40B0B /* ContentView.swift in Sources */,
 				2B2F1F17280F0D1900F40B0B /* SwiftUITrafficLightApp.swift in Sources */,
 			);
