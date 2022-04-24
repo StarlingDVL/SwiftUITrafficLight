@@ -40,18 +40,16 @@ struct TrafficLightView: View {
     
     private var setupButton: some View {
         ZStack {
-            Color.white
-            ZStack {
-                Color.blue
-                Text("\(buttonTitle)")
-                    .foregroundColor(.white)
-                    .font(.title)
-            }
-            .frame(width: 190, height: 60)
-            .cornerRadius(10)
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.blue)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.white, lineWidth: 5)
+                )
+                .frame(width: 200, height: 70)
+            Text("\(buttonTitle)")
+                .foregroundColor(.white)
+                .font(.title)
         }
-        .frame(width: 200, height: 70)
-        .cornerRadius(10)
     }
     
     private func buttonPressed() {
@@ -60,12 +58,9 @@ struct TrafficLightView: View {
     }
     
     private func setTrafficLight(withHue hue: Double, isOn: Bool) -> Color {
-        var color: Color
-        if isOn == false {
-            color = Color(hue: hue, saturation: 1.0, brightness: 0.5)
-        } else {
-           color = Color(hue: hue, saturation: 1.0, brightness: 1.0)
-        }
+        let color = !isOn
+        ? Color(hue: hue, saturation: 1.0, brightness: 0.5)
+        : Color(hue: hue, saturation: 1.0, brightness: 1.0)
         return color
     }
     
