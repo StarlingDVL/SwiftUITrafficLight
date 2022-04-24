@@ -22,7 +22,7 @@ struct TrafficLightView: View {
             VStack {
                 trafficLight
                 Spacer()
-                Button(action: { buttonPressed() }) {
+                Button(action: buttonPressed) {
                     setupButton
                 }
             }
@@ -32,9 +32,9 @@ struct TrafficLightView: View {
     
     private var trafficLight: some View {
         VStack(spacing: 20){
-            CircleView(color: setTrafficLight(withHue: 0.03, isOn: redLightIsOn))
-            CircleView(color: setTrafficLight(withHue: 0.14, isOn: yellowLightIsOn))
-            CircleView(color: setTrafficLight(withHue: 0.3, isOn: greenLightIsOn))
+            CircleView(color: setTrafficLight(withHue: 0.03, isOn: redLightIsOn), opacity: redLightIsOn ? 1 : 0.5)
+            CircleView(color: setTrafficLight(withHue: 0.14, isOn: yellowLightIsOn),opacity: yellowLightIsOn ? 1 : 0.5)
+            CircleView(color: setTrafficLight(withHue: 0.3, isOn: greenLightIsOn), opacity: greenLightIsOn ? 1 : 0.5)
         }
     }
     
@@ -59,7 +59,7 @@ struct TrafficLightView: View {
     
     private func setTrafficLight(withHue hue: Double, isOn: Bool) -> Color {
         let color = !isOn
-        ? Color(hue: hue, saturation: 1.0, brightness: 0.5)
+        ? Color(hue: hue, saturation: 1.0, brightness: 1.0)
         : Color(hue: hue, saturation: 1.0, brightness: 1.0)
         return color
     }
